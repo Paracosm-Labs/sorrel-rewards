@@ -27,8 +27,8 @@ const OffcanvasManageCampaign = () => {
             <div className="col mt-2">   
 
               <div class="input-group mb-3">
-                <span class="input-group-text" id="c-descript">Description</span>
-                <input type="text" class="form-control" placeholder="Describe your Campaign" aria-label="Username" aria-describedby="c-descript" />
+                <span class="input-group-text" id="c-name">Name</span>
+                <input type="text" class="form-control" placeholder="Describe your Campaign" aria-label="Campaign Name" aria-describedby="c-descript" />
               </div> 
 
 
