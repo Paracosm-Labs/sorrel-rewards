@@ -26,15 +26,15 @@ const OffcanvasManageCampaign = () => {
           <div className="row">
             <div className="col mt-2">   
 
-              <div class="input-group mb-3">
-                <span class="input-group-text" id="c-name">Name</span>
-                <input type="text" class="form-control" placeholder="Describe your Campaign" aria-label="Campaign Name" aria-describedby="c-descript" />
+              <div className="input-group mb-3">
+                <span className="input-group-text" id="c-name">Name</span>
+                <input type="text" className="form-control" placeholder="Describe your Campaign" aria-label="Campaign Name" aria-describedby="c-descript" />
               </div> 
 
 
-              <div class="input-group mb-3">
-                <label class="input-group-text" for="c-type">Type</label>
-                <select class="form-select" id="c-type">
+              <div className="input-group mb-3">
+                <label className="input-group-text" htmlFor="c-type">Type</label>
+                <select className="form-select" id="c-type">
                   <option selected>Choose...</option>
                   <option value="1">Digital Stamp Collection</option>
                   <option value="2">Quest</option>
@@ -43,9 +43,9 @@ const OffcanvasManageCampaign = () => {
               </div>
 
 
-              <div class="input-group mb-3">
-                <label class="input-group-text" for="c-duration">Duration</label>
-                <select class="form-select" id="c-duration">
+              <div className="input-group mb-3">
+                <label className="input-group-text" htmlFor="c-duration">Duration</label>
+                <select className="form-select" id="c-duration">
                   <option selected>Choose...</option>
                   <option value="1">Datepicker</option>
                   <option value="1">3 months</option>
@@ -57,44 +57,44 @@ const OffcanvasManageCampaign = () => {
               </div>
 
               <small className="text-left text-sm sorrel-bal">Available Points: 900000</small>
-              <div class="input-group mb-3">
-                <span class="input-group-text" id="c-max-points-alloc">Points Allocation</span>
-                <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="c-max-points-alloc" />
+              <div className="input-group mb-3">
+                <span className="input-group-text" id="c-max-points-alloc">Points Allocation</span>
+                <input type="text" className="form-control" placeholder="" aria-label="Username" aria-describedby="c-max-points-alloc" />
               </div> 
 
-              <div class="input-group mb-3">
+              <div className="input-group mb-3">
 
-                <span class="input-group-text" id="c-points-alloc">Points per Action</span>
-                <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="c-points-alloc" />
-
-              </div>
-
-              <div class="input-group mb-3">
-
-                <span class="input-group-text" id="c-points-threshold">Points Threshold</span>
-                <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="c-points-threshold" />
+                <span className="input-group-text" id="c-points-alloc">Points per Action</span>
+                <input type="text" className="form-control" placeholder="" aria-label="Username" aria-describedby="c-points-alloc" />
 
               </div>
 
+              <div className="input-group mb-3">
+
+                <span className="input-group-text" id="c-points-threshold">Points Threshold</span>
+                <input type="text" className="form-control" placeholder="" aria-label="Username" aria-describedby="c-points-threshold" />
+
+              </div>
 
 
-              <div class="btn-group-vertical" role="group" aria-label="Eligible Actions">
-                <p class="input-group-text">Eligible Actions</p>
 
-                <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off"/>
-                <label class="btn btn-outline-primary" for="btncheck1">Proof of Purchase</label>
+              <div className="btn-group-vertical" role="group" aria-label="Eligible Actions">
+                <p className="input-group-text">Eligible Actions</p>
 
-                <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off"/>
-                <label class="btn btn-outline-primary" for="btncheck2">Customer Review</label>
+                <input type="checkbox" className="btn-check" id="btncheck1" autoComplete="off"/>
+                <label className="btn btn-outline-primary" htmlFor="btncheck1">Proof of Purchase</label>
 
-                <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off"/>
-                <label class="btn btn-outline-primary" for="btncheck3">Social Media Engagement</label>
+                <input type="checkbox" className="btn-check" id="btncheck2" autoComplete="off"/>
+                <label className="btn btn-outline-primary" htmlFor="btncheck2">Customer Review</label>
 
-                <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off"/>
-                <label class="btn btn-outline-primary" for="btncheck3">Birthday</label>
+                <input type="checkbox" className="btn-check" id="btncheck3" autoComplete="off"/>
+                <label className="btn btn-outline-primary" htmlFor="btncheck3">Social Media Engagement</label>
 
-                <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off"/>
-                <label class="btn btn-outline-primary" for="btncheck3">Other</label>
+                <input type="checkbox" className="btn-check" id="btncheck3" autoComplete="off"/>
+                <label className="btn btn-outline-primary" htmlFor="btncheck3">Birthday</label>
+
+                <input type="checkbox" className="btn-check" id="btncheck3" autoComplete="off"/>
+                <label className="btn btn-outline-primary" htmlFor="btncheck3">Other</label>
               </div>
 
 
