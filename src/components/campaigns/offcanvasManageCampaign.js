@@ -14,6 +14,7 @@ const OffcanvasManageCampaign = () => {
 
 
   return (
+    <>
     <div className="offcanvas navpane offcanvas-end" tabIndex="-1" id="offcanvasManageCampaign" aria-labelledby="offcanvasManageCampaignLabel">
       <div className="offcanvas-header">
         <h5 className="offcanvas-title" id="offcanvasManageCampaignLabel">Add/Manage Campaign</h5>
@@ -24,6 +25,12 @@ const OffcanvasManageCampaign = () => {
         <section>
           <div className="row">
             <div className="col mt-2">   
+
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="c-descript">Description</span>
+                <input type="text" class="form-control" placeholder="Describe your Campaign" aria-label="Username" aria-describedby="c-descript" />
+              </div> 
+
 
               <div class="input-group mb-3">
                 <label class="input-group-text" for="c-type">Type</label>
@@ -40,6 +47,7 @@ const OffcanvasManageCampaign = () => {
                 <label class="input-group-text" for="c-duration">Duration</label>
                 <select class="form-select" id="c-duration">
                   <option selected>Choose...</option>
+                  <option value="1">Datepicker</option>
                   <option value="1">3 months</option>
                   <option value="2">6 months</option>
                   <option value="3">9 months</option>
@@ -50,7 +58,7 @@ const OffcanvasManageCampaign = () => {
 
               <small className="text-left text-sm sorrel-bal">Available Points: 900000</small>
               <div class="input-group mb-3">
-                <span class="input-group-text" id="c-max-points-alloc">Max Campaign Points</span>
+                <span class="input-group-text" id="c-max-points-alloc">Points Allocation</span>
                 <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="c-max-points-alloc" />
               </div> 
 
@@ -61,17 +69,32 @@ const OffcanvasManageCampaign = () => {
 
               </div>
 
-
               <div class="input-group mb-3">
-                <label class="input-group-text" for="c-tier-requirement">Type</label>
-                <select class="form-select" id="c-tier-requirement">
-                  <option selected>Choose...</option>
-                  <option value="1">3 months</option>
-                  <option value="2">6 months</option>
-                  <option value="3">9 months</option>
-                  <option value="3">12 months</option>
-                  <option value="3">indefinite</option>
-                </select>
+
+                <span class="input-group-text" id="c-points-threshold">Points Threshold</span>
+                <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="c-points-threshold" />
+
+              </div>
+
+
+
+              <div class="btn-group-vertical" role="group" aria-label="Eligible Actions">
+                <p class="input-group-text">Eligible Actions</p>
+
+                <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off"/>
+                <label class="btn btn-outline-primary" for="btncheck1">Proof of Purchase</label>
+
+                <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off"/>
+                <label class="btn btn-outline-primary" for="btncheck2">Customer Review</label>
+
+                <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off"/>
+                <label class="btn btn-outline-primary" for="btncheck3">Social Media Engagement</label>
+
+                <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off"/>
+                <label class="btn btn-outline-primary" for="btncheck3">Birthday</label>
+
+                <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off"/>
+                <label class="btn btn-outline-primary" for="btncheck3">Other</label>
               </div>
 
 
@@ -80,7 +103,7 @@ const OffcanvasManageCampaign = () => {
 
 
           <button type="button" className={`mt-5 btn btn-lg w-100 btn-success`} data-bs-dismiss="offcanvas">
-            Launch Campaign
+            Create Campaign
           </button>
 
           </div>
@@ -89,6 +112,7 @@ const OffcanvasManageCampaign = () => {
 
       </div>
     </div>
+    </>
   );
 };
 

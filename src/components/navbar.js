@@ -42,7 +42,8 @@ const NavBar = () => {
           <Nav className="ml-auto">
 
             <NavItem className="">
-              <Link to="/explore" className="nav-link">900000 Credits</Link>
+              900000 Credits
+              <button className="btn btn-sm btn-outline-success mx-2">Recharge +</button>
             </NavItem>
 
               <button className="btn btn lg btn-outline" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav" aria-controls="offcanvasNav">

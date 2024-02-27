@@ -51,7 +51,10 @@ const CampaignsPage = () => {
                   <td>{campaign.type}</td>
                   <td>{campaign.endDate}</td>
                   <td>{campaign.pointsPool}</td>
-                  <td></td>
+                  <td>
+                    <button className="btn btn-sm btn-outline-success mx-1">Topup</button>
+                    <button className="btn btn-sm btn-outline-success mx-1">Action</button>
+                  </td>
                 </tr>
               ))}
             </tbody>
