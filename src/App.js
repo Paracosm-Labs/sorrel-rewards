@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import DashboardPage from './pages/dashboardPage';
+import WalletPage from './pages/walletPage';
+import ExplorePage from './pages/marketplacePage';
+import CampaignsPage from './pages/campaignsPage';
+import RewardsPage from './pages/rewardsPage';
+// other imports
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<DashboardPage />} />
+        <Route path="/wallet" element={<WalletPage />} />
+        <Route path="/explore" element={<ExplorePage />} />
+        <Route path="/campaigns" element={<CampaignsPage />} />
+        <Route path="/rewards" element={<RewardsPage />} />
+        // other routes
+      </Routes>
+    </Router>
   );
 }
 

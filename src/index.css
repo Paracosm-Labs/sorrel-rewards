@@ -11,3 +11,113 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.bg{background-color:#eee;
+  overflow-x: hidden;
+/*    background: radial-gradient(circle, #0f0f0f, #2d2a31, #0f0f0f);*/
+  }
+
+
+/* Track */
+::-webkit-scrollbar {
+  width: 5px; /* Set the width of the scrollbar */
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; /* Set the color of the scrollbar handle */
+  border-radius: 36px!important;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Set the color of the scrollbar handle on hover */
+}
+
+
+/*h2{color: #eee!important;}*/
+
+.account-balance .card, .search-box .card {
+    height: 180px;
+    background-color: #fff;
+    border-radius: 0px 0px 30px 30px;
+/*    color: #eee!important;*/
+    border:none;
+    box-shadow: 0 3px 0px #109e77;
+}
+
+.offcanvas, .contacts .modal-content {background-color: #eee!important;}
+/*.offcanvas p, .offcanvas h1, .offcanvas h5, .offcanvas h6, .offcanvas .fa-solid, .offcanvas label { color: #eee;}*/
+
+
+.retailer-card{background-color: #fff;}
+
+.activity {min-height:500px;}
+
+/**
+ * ----------------------------------------
+ * animation vibrate-1
+ * ----------------------------------------
+ */
+
+.vibrate-1 {
+  -webkit-animation: vibrate-1 0.2s linear infinite both;
+          animation: vibrate-1 0.2s linear infinite both;
+  color: #109e77;
+  transition-timing-function: ease-in;
+  transition: 1s;
+}
+
+@-webkit-keyframes vibrate-1 {
+  0% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  20% {
+    -webkit-transform: translate(-2px, 2px);
+            transform: translate(-2px, 2px);
+  }
+  40% {
+    -webkit-transform: translate(-2px, -2px);
+            transform: translate(-2px, -2px);
+  }
+  60% {
+    -webkit-transform: translate(2px, 2px);
+            transform: translate(2px, 2px);
+  }
+  80% {
+    -webkit-transform: translate(2px, -2px);
+            transform: translate(2px, -2px);
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+@keyframes vibrate-1 {
+  0% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  20% {
+    -webkit-transform: translate(-2px, 2px);
+            transform: translate(-2px, 2px);
+  }
+  40% {
+    -webkit-transform: translate(-2px, -2px);
+            transform: translate(-2px, -2px);
+  }
+  60% {
+    -webkit-transform: translate(2px, 2px);
+            transform: translate(2px, 2px);
+  }
+  80% {
+    -webkit-transform: translate(2px, -2px);
+            transform: translate(2px, -2px);
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
