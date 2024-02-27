@@ -1,6 +1,7 @@
 //navbar.js
 import React from 'react';
 import { Link } from 'react-router-dom';
+import WalletConnect from './walletConnect';
 import OffcanvasNav from './offcanvasNav';
 import { Nav, Navbar, NavItem } from 'react-bootstrap';
 import DappLogo from "../img/logo2x.png";
@@ -43,9 +44,9 @@ const NavBar = () => {
 
             <NavItem className="">
               900000 Credits
-              <button className="btn btn-sm btn-outline-success mx-2">Recharge +</button>
+              <button className="btn btn-outline-success mx-2">Recharge +</button>
             </NavItem>
-
+            <WalletConnect></WalletConnect>
               <button className="btn btn lg btn-outline" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav" aria-controls="offcanvasNav">
                 <span className="navbar-toggler-icon"></span>
               </button>

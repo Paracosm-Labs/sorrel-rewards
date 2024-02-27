@@ -26,10 +26,10 @@ root.render(
         themeType: 'dark',
         fiatCoin: 'USD',
         language: 'en',
-        erc4337: {
-          name: 'SIMPLE',
-          version: '1.0.0',
-        },
+        // erc4337: {
+        //   name: 'SIMPLE',
+        //   version: '1.0.0',
+        // },
         promptSettingConfig: {
           promptPaymentPasswordSettingWhenSign: PromptSettingType.first,
           promptMasterPasswordSettingWhenLogin: PromptSettingType.first,
