@@ -11,7 +11,7 @@ const NavBar = () => {
     <>
     <div className="d-flex bg-sorrel-nav">
     <div className="container justify-content-center py-1">
-      <Navbar bg="" className="navbar-light">
+      <Navbar bg="" className="navbar-light" expand="lg">
         <Navbar.Brand href="/">
           <img src={DappLogo}
             height="48"
@@ -19,8 +19,9 @@ const NavBar = () => {
           />
         </Navbar.Brand>
 
-
-          <Nav className="m-auto text-center">
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="m-auto text-center m-auto nav-items">
             <NavItem className="px-3">
               <Link to="/" className="nav-link"><i className="fa-solid fa-dashboard"></i><br/>Dashboard</Link>
             </NavItem>
@@ -42,8 +43,7 @@ const NavBar = () => {
           </Nav>
           <Nav className="ml-auto">
 
-            <NavItem className="">
-              900000 Credits
+            <NavItem className="text-center">
               <button className="btn btn-outline-success mx-2">Recharge +</button>
             </NavItem>
             <WalletConnect></WalletConnect>
@@ -51,10 +51,8 @@ const NavBar = () => {
                 <span className="navbar-toggler-icon"></span>
               </button>
 
-            <NavItem>
-              
-            </NavItem>
           </Nav>
+          </Navbar.Collapse>
       </Navbar>
 
 

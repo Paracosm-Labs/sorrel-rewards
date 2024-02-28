@@ -14,9 +14,9 @@ const DashboardPage = () => {
     <>
     <div className="rewards">
     	<Navbar></Navbar>
-      <div className="row mb-4">
+      <div className="row mt-3 mb-4">
         <div className="col">
-          <PieChart></PieChart>
+          {/* <PieChart></PieChart> */}
         </div>
         <div className="col">
           <DataChart></DataChart>

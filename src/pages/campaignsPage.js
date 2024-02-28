@@ -47,7 +47,7 @@ const CampaignsPage = () => {
             <tbody>
               {campaigns.map((campaign) => (
                 <tr key={campaign.id}>
-                  <td>{campaign.name}<br/>{campaign.status}</td>
+                  <td>{campaign.name}<br/><small className="text-muted">{campaign.status}</small></td>
                   <td>{campaign.type}</td>
                   <td>{campaign.endDate}</td>
                   <td>{campaign.pointsPool}</td>
