@@ -35,7 +35,7 @@ root.render(
           promptMasterPasswordSettingWhenLogin: PromptSettingType.first,
         },
         wallet: {
-          visible: true,
+          visible: false,
           customStyle: {
             supportChains: [Tron, TronNile],
           }
