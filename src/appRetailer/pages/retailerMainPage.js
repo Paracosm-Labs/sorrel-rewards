@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { useConnect } from '@particle-network/auth-core-modal';
 import { getUserInfo } from '@particle-network/auth-core';
-
+import { Link } from 'react-router-dom';
+import { Nav, Navbar, NavItem } from 'react-bootstrap';
 import DappLogo from "../../img/logo2x.png";
-import OffcanvasNav from '../../components/offcanvasNav';
-import { R_CAMPAIGNS, R_DASHBOARD, R_UNCONNECTED } from '../../constants/retailerPageType';
+import OffcanvasRecharge from '../components/offcanvasRecharge';
+import { R_REWARDS, R_CAMPAIGNS, R_DASHBOARD, R_UNCONNECTED } from '../../constants/retailerPageType';
 import RetailerUnconnected from '../components/rUnconnected';
-import DashboardPage from '../components/dashboard';
 import Dashboard from '../components/dashboard';
 import Campaigns from '../components/campaigns';
+import Rewards from '../components/rewards';
 
 const RetailerMainPage = () => {
   const { connect, disconnect, connected } = useConnect();
@@ -61,6 +62,8 @@ const RetailerMainPage = () => {
             return <Dashboard></Dashboard>
             case R_CAMPAIGNS:
                 return <Campaigns></Campaigns>
+            case R_REWARDS:
+                return <Rewards></Rewards>
         default:
             return <RetailerUnconnected></RetailerUnconnected>
     }
@@ -69,48 +72,63 @@ const RetailerMainPage = () => {
 
   return (
     <>
-        <nav class="navbar navbar-expand-md bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href='/'>
-                <img src={DappLogo} height="48" alt="Sorrel Rewards"/>
-            </a>
-            <div class="d-flex">
+    <div className="d-flex bg-sorrel-nav">
+    <div className="container justify-content-center py-1">
+      <Navbar bg="" className="navbar-light" expand="lg">
+        <Navbar.Brand href="/">
+          <img src={DappLogo}
+            height="48"
+            alt="Sorrel Rewards"
+          />
+        </Navbar.Brand>
+
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
             {connected ? (
                 <>
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" onClick={() => setPage(R_DASHBOARD)}><i className="fa-solid fa-dashboard"></i></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" onClick={() => setPage(R_CAMPAIGNS)}><i className="fa-solid fa-mattress-pillow"></i></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><i className="fa-solid fa-wallet"></i></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><i className="fa-solid fa-vault"></i></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><i className="fa-solid fa-store"></i></a>
-                        </li>                        
-                    </ul>                
+
+                  <Nav className="m-auto text-center nav-items">
+                    <NavItem className="px-3">
+                      <Link to="#" className="nav-link" onClick={() => setPage(R_DASHBOARD)}><i className="fa-solid fa-dashboard"></i><br/>Dashboard</Link>
+                    </NavItem>
+                    <NavItem className="px-3">
+                      <Link to="#" className="nav-link" onClick={() => setPage(R_CAMPAIGNS)}><i className="fa-solid fa-mattress-pillow"></i><br/>Campaigns</Link>
+                    </NavItem>
+                    <NavItem className="px-3">
+                      <Link to="#" className="nav-link" onClick={() => setPage(R_REWARDS)}><i className="fa-solid fa-gifts"></i><br/>Rewards</Link>
+                    </NavItem>
+                    <NavItem className="px-3 d-none">
+                      <Link to="/wallet" className="nav-link"><i className="fa-solid fa-wallet"></i><br/>Wallet</Link>
+                    </NavItem>
+                    <NavItem className="px-3 d-none">
+                      <Link to="/earn" className="nav-link"><i className="fa-solid fa-vault"></i><br/>Earn</Link>
+                    </NavItem>
+                    <NavItem className="px-3 d-none">
+                      <Link to="/explore" className="nav-link"><i className="fa-solid fa-store"></i><br/>Explore</Link>
+                    </NavItem>
+                  </Nav>
+             
                 </>
             ) : (
                 <></>
             )} 
+            
+            {connected ? (<>
 
-            {connected ? (
-                <button className="btn btn-primary" onClick={handleDisconnect}>Log out</button>
-            ) : (
-                <button className="btn btn-warning" onClick={handleConnect}>Log in</button>
+                
+                <button className="btn btn-outline-success mx-4 my-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRecharge">Recharge +</button>
+                
+                <button className="btn btn-outline-danger my-2" type="button" onClick={handleDisconnect}>Log out</button>
+            </>) : (
+                <button className="btn btn-warning my-2" type="button" onClick={handleConnect}>Log in</button>
             )}                
-                <button className="btn btn lg btn-outline" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-            </div>
-        </div>
-        </nav>
-        <OffcanvasNav></OffcanvasNav>
+                
+            
+          </Navbar.Collapse>
+      </Navbar>
+    </div>
+    </div>
+        <OffcanvasRecharge></OffcanvasRecharge>
         <div>{getPage()}</div>
         <footer class="pt-5 my-5 text-body-secondary border-top">
             Sorrel &middot; &copy; 2024

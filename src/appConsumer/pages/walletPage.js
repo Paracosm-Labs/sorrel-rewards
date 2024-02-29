@@ -1,9 +1,9 @@
 //walletPage.js
 import React from 'react';
-import TokenBalance from '../components/tokenBalance';
-import RecentTransactions from '../components/recentTransactions';
+import TokenBalance from '../../components/tokenBalance';
+import RecentTransactions from '../../components/recentTransactions';
 import Promotions from '../components/promotions';
-import Navbar from '../components/navbar';
+import Navbar from '../../components/navbar';
 
 
 

@@ -1,11 +1,10 @@
-//rewardsPage.js
+//rewards.js
 import React from 'react';
-import Navbar from '../components/navbar';
-import TokenBalance from '../components/tokenBalance';
-import OffcanvasManageRewards from '../components/rewards/offcanvasManageRewards';
+import TokenBalance from '../../components/tokenBalance';
+import OffcanvasManageRewards from '../components/offcanvasManageRewards';
 
 
-const RewardsPage = () => {
+const Rewards = () => {
 
   // Dummy data for campaigns
   const rewards = [
@@ -19,7 +18,6 @@ const RewardsPage = () => {
   return (
     <>
     <div className="rewards">
-      <Navbar></Navbar>
       <h2>Rewards</h2>
     
       <div className="actions m-3">
@@ -62,4 +60,4 @@ const RewardsPage = () => {
   );
 };
 
-export default RewardsPage;
+export default Rewards;

@@ -1,6 +1,6 @@
 import React from 'react';
-import OffcanvasManageCampaign from '../../components/campaigns/offcanvasManageCampaign';
-import OffcanvasManageTier from '../../components/campaigns/offcanvasManageTier';
+import OffcanvasManageCampaign from '../components/campaigns/offcanvasManageCampaign';
+import OffcanvasManageTier from '../components/campaigns/offcanvasManageTier';
 
 
 const Campaigns = () => {

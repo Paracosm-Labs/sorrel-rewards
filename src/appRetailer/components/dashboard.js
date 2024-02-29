@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import DataChart from '../../components/dashboard/dataChart';
 import PieChart from '../../components/dashboard/pieChart';
 import DataActivity from '../../components/dashboard/dataActivity';
-import OffcanvasManageCampaign from '../../components/campaigns/offcanvasManageCampaign';
-import OffcanvasManageTier from '../../components/campaigns/offcanvasManageTier';
+import OffcanvasManageCampaign from '../components/campaigns/offcanvasManageCampaign';
+import OffcanvasManageTier from '../components/campaigns/offcanvasManageTier';
 
 const Dashboard = () => {
   return (

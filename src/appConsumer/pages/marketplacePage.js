@@ -1,8 +1,8 @@
 //marketplace.js
 import React from 'react';
-import Navbar from '../components/navbar';
-import SearchBox from '../components/searchBox';
-import Retailers from '../components/retailerListings';
+import Navbar from '../../components/navbar';
+import SearchBox from '../../components/searchBox';
+import Retailers from '../../components/retailerListings';
 
 
 

@@ -38,7 +38,7 @@ const OffcanvasManageRewards = () => {
 
 
             <button type="button" className={`mt-5 btn btn-lg w-100 btn-success`} data-bs-dismiss="offcanvas">
-              Redeem
+              Add Reward
             </button>
 
           </div>
