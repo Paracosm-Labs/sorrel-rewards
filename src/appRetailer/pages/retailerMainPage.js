@@ -5,11 +5,12 @@ import { Link } from 'react-router-dom';
 import { Nav, Navbar, NavItem } from 'react-bootstrap';
 import DappLogo from "../../img/logo2x.png";
 import OffcanvasRecharge from '../components/offcanvasRecharge';
-import { R_REWARDS, R_CAMPAIGNS, R_DASHBOARD, R_UNCONNECTED } from '../../constants/retailerPageType';
+import { R_REWARDS, R_CAMPAIGNS, R_DASHBOARD, R_UNCONNECTED, R_DEPOSIT } from '../../constants/retailerPageType';
 import RetailerUnconnected from '../components/rUnconnected';
 import Dashboard from '../components/dashboard';
 import Campaigns from '../components/campaigns';
 import Rewards from '../components/rewards';
+import Deposit from '../components/deposit';
 
 const RetailerMainPage = () => {
   const { connect, disconnect, connected } = useConnect();
@@ -64,6 +65,8 @@ const RetailerMainPage = () => {
                 return <Campaigns></Campaigns>
             case R_REWARDS:
                 return <Rewards></Rewards>
+            case R_DEPOSIT:
+                return <Deposit></Deposit> 
         default:
             return <RetailerUnconnected></RetailerUnconnected>
     }
@@ -97,6 +100,9 @@ const RetailerMainPage = () => {
                     <NavItem className="px-3">
                       <Link to="#" className="nav-link" onClick={() => setPage(R_REWARDS)}><i className="fa-solid fa-gifts"></i><br/>Rewards</Link>
                     </NavItem>
+                    <NavItem className="px-3">
+                      <Link to="#" className="nav-link" onClick={() => setPage(R_DEPOSIT)}><i className="fa-solid fa-gifts"></i><br/>Deposit</Link>
+                    </NavItem>                    
                     <NavItem className="px-3 d-none">
                       <Link to="/wallet" className="nav-link"><i className="fa-solid fa-wallet"></i><br/>Wallet</Link>
                     </NavItem>
