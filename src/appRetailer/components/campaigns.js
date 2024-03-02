@@ -1,15 +1,19 @@
 import React from 'react';
-import OffcanvasManageCampaign from '../components/campaigns/offcanvasManageCampaign';
-import OffcanvasManageTier from '../components/campaigns/offcanvasManageTier';
+// import OffcanvasManageCampaign from './campaigns/offcanvasManageCampaign';
+// import OffcanvasManageTier from './campaigns/offcanvasManageTier';
+import ModalRetailOnboard from './modalRetailOnboard';
+import ModalManageCampaign from './modalManageCampaign';
+import ModalManageTier from './modalManageTier';
+import ModalTopup from './modalTopup';
 
 
 const Campaigns = () => {
 
   // Dummy data for campaigns
   const campaigns = [
-    { id: 1, name: 'Campaign 1', startDate: '2022-01-01', endDate: '2022-12-31', status: 'Active', type: 'Digital Stamp Collection', pointsPool:23000 },
-    { id: 2, name: 'Campaign 2', startDate: '2022-02-01', endDate: '2022-08-31', status: 'Active', type: 'Digital Stamp Collection', pointsPool:20000 },
-    { id: 3, name: 'Campaign 3', startDate: '2022-03-01', endDate: '2023-03-01', status: 'Completed', type: 'Digital Stamp Collection', pointsPool:42500 },
+    { id: 1, name: 'Easter Campaign 2024', startDate: '2022-01-01', endDate: '2022-12-31', status: 'Active', type: 'Digital Stamp Collection', pointsPool:23000 },
+    { id: 2, name: 'Summer Fusion Surprise', startDate: '2022-02-01', endDate: '2022-08-31', status: 'Active', type: 'Digital Stamp Collection', pointsPool:20000 },
+    { id: 3, name: 'Christmas Ultra Bonus', startDate: '2024-11-01', endDate: '2025-01-03', status: 'Upcoming', type: 'Digital Stamp Collection', pointsPool:42500 },
     // Add more campaigns as needed
   ];
 
@@ -20,12 +24,14 @@ const Campaigns = () => {
       <h2>Campaigns</h2>
       
       <div className="actions m-3">
-        <a href="#" className="btn btn-success" data-bs-toggle="offcanvas" data-bs-target="#offcanvasManageCampaign" aria-controls="offcanvasManageCampaign">
-          + Add Campaign
-        </a>
-        <a href="#" className="btn btn-success mx-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvasManageTier" aria-controls="offcanvasManageTier">
-          + Add Tier
-        </a>
+
+        <ModalRetailOnboard />
+
+        <ModalManageCampaign />
+
+        <ModalManageTier />
+
+
       </div>
 
 
@@ -35,20 +41,25 @@ const Campaigns = () => {
               <tr>
                 <th>Name</th>
                 <th>Type</th>
-                <th>End Date</th>
+                <th>Running Period</th>
                 <th>Points Remaining</th>
                 <th></th>
               </tr>
             </thead>
             <tbody>
               {campaigns.map((campaign) => (
-                <tr key={campaign.id}>
-                  <td>{campaign.name}<br/><small className="text-muted">{campaign.status}</small></td>
+                <tr className="py-3" key={campaign.id}>
+                  <td className="">{campaign.name}
+                    &nbsp;&nbsp;
+                    <span className="badge rounded-pill bg-success">
+                      {campaign.status}
+                    </span>
+                  </td>
                   <td>{campaign.type}</td>
-                  <td>{campaign.endDate}</td>
+                  <td>{campaign.startDate} - {campaign.endDate}</td>
                   <td>{campaign.pointsPool}</td>
                   <td>
-                    <button className="btn btn-sm btn-outline-success mx-1">Topup</button>
+                    <ModalTopup/>
                     <button className="btn btn-sm btn-outline-success mx-1">Action</button>
                   </td>
                 </tr>
@@ -56,10 +67,6 @@ const Campaigns = () => {
             </tbody>
           </table>
         </div>
-
-
-      <OffcanvasManageCampaign />
-      <OffcanvasManageTier />
 
 
 
