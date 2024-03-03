@@ -10,19 +10,19 @@ const Loans = () => {
         <div className="d-flex justify-content-center">
           <div className="card text-center" style={{maxWidth: "600px"}}>
             <div className="card-header">
-              <h4>Your Points Balance</h4>
+            	<TokenBalance/>
             </div>
             <div className="card-body">
-            <TokenBalance/>
-              <p className="card-text">40,000 Available | 50,000 Frozen</p>
-              <p className="card-text">Credit Available: $1,500</p>
+
+              <p className="card-text">600 Available | 50,000 Frozen</p>
+              <p className="card-text">Credit Limit: $1,500</p>
               <p className="card-text">Total Borrowed: $500</p>
               <p className="card-text">Current Interest Rate: 4% APR</p>
             </div>
             <div className="card-footer">
-              <button className="btn btn-info m-2">Freeze Points</button>
-              <button className="btn btn-success m-2">Borrow Funds</button>
-              <button className="btn btn-primary m-2">Repay Loan</button>
+              <button className="btn btn-outline-info m-2">Freeze Points</button>
+              <button className="btn btn-outline-success m-2">Borrow Funds</button>
+              <button className="btn btn-outline-primary m-2">Repay Loan</button>
             </div>
           </div>
         </div>

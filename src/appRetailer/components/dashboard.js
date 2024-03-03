@@ -4,7 +4,6 @@ import PieChart from '../../components/dashboard/pieChart';
 import DataActivity from '../../components/dashboard/dataActivity';
 import ModalManageCampaign from './modalManageCampaign';
 import ModalManageTier from './modalManageTier';
-// import OffcanvasManageTier from '../components/campaigns/offcanvasManageTier';
 
 const Dashboard = () => {
   return (

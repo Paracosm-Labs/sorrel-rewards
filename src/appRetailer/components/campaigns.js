@@ -1,6 +1,4 @@
 import React from 'react';
-// import OffcanvasManageCampaign from './campaigns/offcanvasManageCampaign';
-// import OffcanvasManageTier from './campaigns/offcanvasManageTier';
 import ModalRetailOnboard from './modalRetailOnboard';
 import ModalManageCampaign from './modalManageCampaign';
 import ModalManageTier from './modalManageTier';
@@ -60,7 +58,7 @@ const Campaigns = () => {
                   <td>{campaign.pointsPool}</td>
                   <td>
                     <ModalTopup/>
-                    <button className="btn btn-sm btn-outline-success mx-1">Action</button>
+                    <button className="btn btn-sm btn-outline-success mx-1">QR Code</button>
                   </td>
                 </tr>
               ))}

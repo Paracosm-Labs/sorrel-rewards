@@ -4,7 +4,6 @@ import { getUserInfo } from '@particle-network/auth-core';
 import { Link } from 'react-router-dom';
 import { Nav, Navbar, NavItem } from 'react-bootstrap';
 import DappLogo from "../../img/logo2x.png";
-import OffcanvasRecharge from '../components/offcanvasRecharge';
 import { R_REWARDS, R_CAMPAIGNS, R_DASHBOARD, R_UNCONNECTED, R_LOANS, R_DEPOSIT } from '../../constants/retailerPageType';
 import RetailerUnconnected from '../components/rUnconnected';
 import Dashboard from '../components/dashboard';
@@ -13,6 +12,7 @@ import Rewards from '../components/rewards';
 import Deposit from '../components/deposit';
 import Loans from '../components/loans';
 import ModalRetailOnboard from '../components/modalRetailOnboard';
+import ModalRechargeBtn from '../components/modalRecharge';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -134,9 +134,8 @@ const RetailerMainPage = () => {
             
             {connected ? (<>
 
-                
-                <button className="btn btn-outline-success mx-4 my-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRecharge">Recharge +</button>
-                
+                <ModalRechargeBtn />
+                            
                 <button className="btn btn-outline-danger my-2" type="button" onClick={handleDisconnect}>Log out</button>
             </>) : (
                 <button className="btn btn-warning my-2" type="button" onClick={handleConnect}>Log in</button>
@@ -157,7 +156,6 @@ const RetailerMainPage = () => {
           />
 
     </div>
-        <OffcanvasRecharge></OffcanvasRecharge>
         <div>{getPage()}</div>
         <footer class="pt-5 my-5 text-body-secondary border-top">
             Sorrel &middot; &copy; 2024

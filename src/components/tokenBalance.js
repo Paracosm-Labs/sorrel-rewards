@@ -30,9 +30,9 @@ const TokenBalance = () => {
 
   return (<>
 
-    <div className="account-balance mb-4">
+    <div className="account-balance mb-3">
       <div className="card">
-        <div className="card-body mx-5 text-center">
+        <div className="card-body mx-3 text-center">
           <h6 className="mt-2"><img src={gTTDImg} alt="Currency" className="currency-icon rounded-circle px-1" height="24" />
             Sorrel Points</h6>
           <h1 className="card-text">

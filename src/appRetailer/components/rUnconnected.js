@@ -11,8 +11,8 @@ const RetailerUnconnected =  () =>  {
 
           <div class="mb-5">
           </div>
-          
-          <hr class="col-3 col-md-2 mb-5"/>
+
+          <hr class="col-3 col-md-2 mb-3"/>
         </main>
 
 </div>

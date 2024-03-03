@@ -1,7 +1,7 @@
 //rewards.js
 import React from 'react';
 import TokenBalance from '../../components/tokenBalance';
-import OffcanvasManageRewards from '../components/offcanvasManageRewards';
+import ModalManageReward from './modalManageReward';
 
 
 const Rewards = () => {
@@ -21,9 +21,7 @@ const Rewards = () => {
       <h2>Rewards</h2>
     
       <div className="actions m-3">
-        <a href="#" className="btn btn-success mx-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvasManageRewards" aria-controls="offcanvasManageRewards">
-          + Add Rewards
-        </a>
+        <ModalManageReward/>
       </div>
 
         <div className="table-responsive mt-5">
@@ -51,7 +49,7 @@ const Rewards = () => {
 
 
 
-      <OffcanvasManageRewards />
+      
 
 
 

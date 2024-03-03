@@ -30,6 +30,7 @@ function ModalRetailOnboard() {
                                 <label htmlFor="retailerName" className="input-group-text">Name</label>
                                 <input type="text" className="form-control" id="retailerName" placeholder="Enter your company name"/>
                             </div>
+
                             <div className="mb-3">
                                 <select className="form-select" id="category">
                                     <option selected disabled>Choose a category that best suits your business</option>
@@ -47,7 +48,6 @@ function ModalRetailOnboard() {
                                     <option value="11">Automotive Services</option>
                                     <option value="12">Bakeries & Confectioneries</option>
                                     <option value="13">Other</option>
-
                                 </select>
                             </div>
                         </FormWizard.TabContent>
@@ -67,12 +67,19 @@ function ModalRetailOnboard() {
                                 <textarea rows="2" className="form-control" id="address"/>
                             </div>
                         </FormWizard.TabContent>
-                        <FormWizard.TabContent title="Blockchain Details">
-                            {/* Step 3: Blockchain Wallet Address */}
-                            <div className="mb-3">
-                                <label htmlFor="walletAddress" className="form-label">Wallet Address</label>
-                                <input type="text" className="form-control" id="walletAddress"/>
+                        <FormWizard.TabContent title="Additional Details">
+                            {/* Step 3: Additional Details */}
+
+                            <div class="input-group mb-3">
+                              <label htmlFor="formLogo" className="input-group-text">Logo</label>
+                              <input className="form-control" type="file" id="formLogo" />
                             </div>
+
+                            <div class="input-group mb-3">
+                              <label htmlFor="stampLogo" className="input-group-text">Stamp Logo</label>
+                              <input className="form-control" type="file" id="stampLogo" />
+                            </div>
+
                         </FormWizard.TabContent>
                     </FormWizard>
                 </Modal.Body>
