@@ -1,6 +1,6 @@
 // TokenBalance.js
-import React, { useState, useEffect, useContext} from 'react';
-import gTTDImg from '../img/logo2x.png';
+import React, { useState, useEffect} from 'react';
+import SorrelImg from '../img/logo2x.png';
 import { BeatLoader } from 'react-spinners';
 
 const TokenBalance = () => {
@@ -33,7 +33,7 @@ const TokenBalance = () => {
     <div className="account-balance mb-3">
       <div className="card">
         <div className="card-body mx-3 text-center">
-          <h6 className="mt-2"><img src={gTTDImg} alt="Currency" className="currency-icon rounded-circle px-1" height="24" />
+          <h6 className="mt-2"><img src={SorrelImg} alt="Currency" className="currency-icon rounded-circle px-1" height="24" />
             Sorrel Points</h6>
           <h1 className="card-text">
             {balance ? <span className={isAnimated ? 'vibrate-1' : '' }>{formattedBalance}</span> 

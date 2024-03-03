@@ -8,9 +8,9 @@ const Rewards = () => {
 
   // Dummy data for campaigns
   const rewards = [
-    { id: 1, name: 'Reward 1', qty: '50', endDate: '2022-12-31', status: 'Active' },
-    { id: 2, name: 'Reward 2', qty: '20', endDate: '2022-08-31', status: 'Active' },
-    { id: 3, name: 'Reward 3', qty: '202', endDate: '2023-03-01', status: 'Active' },
+    { id: 1, name: 'Reward 1', qty: '50', ptsRequired:  '500', expiry: '2022-12-31', status: 'Active' },
+    { id: 2, name: 'Reward 2', qty: '20', ptsRequired:  '500', expiry: '2022-08-31', status: 'Paused' },
+    { id: 3, name: 'Reward 3', qty: '202', ptsRequired:  '500', expiry: '2023-03-01', status: 'Active' },
     // Add more campaigns as needed
   ];
 
@@ -29,18 +29,26 @@ const Rewards = () => {
             <thead>
               <tr>
                 <th>Name</th>
+                <th>Points Required</th>
                 <th>Quantity</th>
-                <th>End Date</th>
-                <th>Status</th>
+                <th>Expiry</th>
+                <th></th>
               </tr>
             </thead>
             <tbody>
               {rewards.map((reward) => (
                 <tr key={reward.id}>
-                  <td>{reward.name}</td>
+                  <td>{reward.name}
+                    <br/><span className="badge bg-success">
+                      {reward.status}
+                    </span>
+                  </td>
+                  <td>{reward.ptsRequired}</td>
                   <td>{reward.qty}</td>
-                  <td>{reward.endDate}</td>
-                  <td>{reward.status}</td>
+                  <td>{reward.expiry}</td>
+                  <td>
+                    <button className="btn btn-sm btn-outline-success mx-1">Action</button>
+                  </td>
                 </tr>
               ))}
             </tbody>

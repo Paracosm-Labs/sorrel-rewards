@@ -113,7 +113,7 @@ const RetailerMainPage = () => {
                     <NavItem className="px-3">
                       <Link to="#" className="nav-link" onClick={() => setPage(R_LOANS)}><i className="fa-solid fa-money-bill-wave"></i><br/>Loans</Link>
                     </NavItem> 
-                    <NavItem className="px-3">
+                    <NavItem className="px-3 d-none">
                       <Link to="#" className="nav-link" onClick={() => setPage(R_DEPOSIT)}><i className="fa-solid fa-plus-circle"></i><br/>Deposit</Link>
                     </NavItem>                    
                     <NavItem className="px-3 d-none">

@@ -1,5 +1,4 @@
 import React from 'react';
-import ModalRetailOnboard from './modalRetailOnboard';
 import ModalManageCampaign from './modalManageCampaign';
 import ModalManageTier from './modalManageTier';
 import ModalTopup from './modalTopup';
@@ -23,7 +22,7 @@ const Campaigns = () => {
       
       <div className="actions m-3">
 
-        <ModalRetailOnboard />
+        
 
         <ModalManageCampaign />
 

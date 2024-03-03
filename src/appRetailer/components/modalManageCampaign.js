@@ -49,7 +49,6 @@ function ModalManageCampaign() {
                             <select className="form-select" id="c-type">
                               <option selected disabled>Choose your Campaign type</option>
                               <option value="1">Digital Stamp Collection</option>
-                              <option value="2">Quest</option>
                               <option value="3" disabled>More coming soon...</option>
                             </select>
                           </div>
@@ -65,7 +64,7 @@ function ModalManageCampaign() {
                               <div className="col text-end">
                                   <div className="input-group mb-3">
                                     <label className="input-group-text" htmlFor="c-enddate">End Date</label>
-                                    <DatePicker className="form-control" id="c-enddate" selected={endDate} onChange={(date) => setEndDate(date)} />
+                                    <DatePicker className="form-control" id="c-enddate" minDate={new Date()} selected={endDate} onChange={(date) => setEndDate(date)} />
                                   </div>
                               </div>
                           </div>
@@ -77,20 +76,20 @@ function ModalManageCampaign() {
                           <p className="text-end"><small>Available Points: 900000</small></p>
                           <div className="input-group mb-3">
                             <span className="input-group-text" id="c-max-points-alloc">Points Allocation</span>
-                            <input type="text" className="form-control" placeholder="" aria-label="Username" aria-describedby="c-max-points-alloc" />
+                            <input type="number" className="form-control" placeholder="" aria-label="Username" aria-describedby="c-max-points-alloc" />
                           </div> 
 
                           <div className="input-group mb-3">
 
                             <span className="input-group-text" id="c-points-alloc">Points per Action</span>
-                            <input type="text" className="form-control" placeholder="" aria-label="Username" aria-describedby="c-points-alloc" />
+                            <input type="number" className="form-control" placeholder="" aria-label="Username" aria-describedby="c-points-alloc" />
 
                           </div>
 
                           <div className="input-group mb-3">
 
                             <span className="input-group-text" id="c-points-threshold">Points Threshold</span>
-                            <input type="text" className="form-control" placeholder="" aria-label="Username" aria-describedby="c-points-threshold" />
+                            <input type="number" className="form-control" placeholder="" aria-label="Username" aria-describedby="c-points-threshold" />
 
                           </div>
                         </FormWizard.TabContent>

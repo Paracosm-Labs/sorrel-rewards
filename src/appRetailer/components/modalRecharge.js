@@ -9,7 +9,7 @@ function ModalRecharge() {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-    const handleRecharge = (tierData) => {
+    const handleRecharge = () => {
         // implement the logic as needed
         handleClose();
         toast.success(`Recharge Successful`);
@@ -26,8 +26,10 @@ function ModalRecharge() {
                     <Modal.Title>Recharge Account</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <div className="currency-selector">
-                          <div className="input-group mb-3 text-end">
+                    <div className="row currency-selector">
+                          <div className="col"></div>
+                          <div className="col"></div>
+                          <div className="col input-group mb-3 text-end">
                             <label className="input-group-text" htmlFor="c-type">Currency</label>
                             <select className="form-select" id="c-type">
                               <option selected value="1">USDT</option>
@@ -43,32 +45,30 @@ function ModalRecharge() {
                         <div className="col card m-3 p-3">
                             <h3>$19</h3>
                             <ul>
-                                <li>1,000 Sorrel Points</li>
-                                <li>Feature 2</li>
+                                <li className="mb-4">1,000 Sorrel Points</li>
+                                
                                 {/* Add more features as needed */}
                             </ul>
-                            <button className="btn btn-outline-primary">Buy Now</button>
+                            <button className="btn btn-outline-primary" onClick={handleRecharge}>Buy Now</button>
                         </div>
                         <div className="col card m-3 p-3">
                             <h3>$89</h3>
                             <ul>
-                                <li>5,000 Sorrel Points</li>
-                                <li>Feature 2</li>
+                                <li className="mb-4">5,000 Sorrel Points</li>
                                 {/* Add more features as needed */}
                             </ul>
-                            <button className="btn btn-outline-primary">Buy Now</button>
+                            <button className="btn btn-outline-primary"onClick={handleRecharge}>Buy Now</button>
                         </div>
                         <div className="col card m-3 p-3">
                             <h3>Custom</h3>
-                            <form className=''>
-                                <ul>
-                                    <div class="mb-3">
+                            <form className='' onSubmit={handleRecharge}>
+                                
+                                    <div class="mb-4">
                                         <input type="number" class="form-control" id="pointsAmount" />
                                     </div>                                        
-                                    <li>Customizable features</li>
                                     {/* Custom plan details */}
-                                </ul>
-                                <button className="btn w-100 btn-outline-primary">Buy Now</button>
+                                
+                                <button type="submit" className="btn w-100 btn-outline-primary">Buy Now</button>
                             </form>
                         </div>
                     </div>
