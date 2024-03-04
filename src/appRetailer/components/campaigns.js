@@ -1,6 +1,6 @@
 import React from 'react';
 import ModalManageCampaign from './modalManageCampaign';
-import ModalManageTier from './modalManageTier';
+// import ModalManageTier from './modalManageTier';
 import ModalTopup from './modalTopup';
 import ModalQR from './modalQR';
 

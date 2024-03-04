@@ -18,15 +18,15 @@ const TokenBalance = () => {
     }, 1000);
   }
 
+  const formattedBalance = balance + 500; //new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(balance);
 
   useEffect(() => {
         if (balance !== 0) {
           handleValueAnimate();
         }
 
-  });
+  }, [formattedBalance]);
 
-  const formattedBalance = balance + 500; //new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(balance);
 
   return (<>
 

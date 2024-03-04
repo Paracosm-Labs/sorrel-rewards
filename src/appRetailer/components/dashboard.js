@@ -4,7 +4,7 @@ import PieChart from '../../components/dashboard/pieChart';
 import DataActivity from '../../components/dashboard/dataActivity';
 import ModalRetailOnboard from './modalRetailOnboard';
 import ModalManageCampaign from './modalManageCampaign';
-import ModalManageTier from './modalManageTier';
+// import ModalManageTier from './modalManageTier';
 
 const Dashboard = () => {
   return (
@@ -16,7 +16,6 @@ const Dashboard = () => {
             <div className="mt-3">
               <div className="mb-3"><ModalRetailOnboard /></div>
               <div className="mb-3"><ModalManageCampaign /></div>
-              <div className="mb-3"><ModalManageTier /></div>
             </div>
         </div>
         <div className="col">
