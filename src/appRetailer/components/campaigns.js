@@ -58,7 +58,7 @@ const Campaigns = () => {
                   <td>{campaign.pointsPool}</td>
                   <td>
                     <ModalTopup/>
-                    <ModalQR qrId={campaign.id}/>
+                    <ModalQR qrId={`https://sorrelrewards.org/campaign/${campaign.id}`}/>
                   </td>
                 </tr>
               ))}

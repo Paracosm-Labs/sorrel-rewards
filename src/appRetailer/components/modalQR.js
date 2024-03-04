@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Modal } from 'react-bootstrap';
 import QRCode from "react-qr-code";
 
-function ModalQR(qrId) {
+function ModalQR({ qrId }) {
     const [show, setShow] = useState(false);
     const [amount, setAmount] = useState(0);
 
@@ -34,6 +34,7 @@ function ModalQR(qrId) {
                         viewBox={`0 0 256 256`}
                         />
                     </div>
+                    <p style={{ textAlign: "center" }}>{qrId}</p>
                     <button  onClick={handleQR} className="btn btn-outline-primary" style={{ display: "block", margin: "0 auto" }}>Close</button>
                     
                 </Modal.Body>
