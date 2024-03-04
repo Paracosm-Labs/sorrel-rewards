@@ -2,6 +2,7 @@ import React from 'react';
 import ModalManageCampaign from './modalManageCampaign';
 import ModalManageTier from './modalManageTier';
 import ModalTopup from './modalTopup';
+import ModalQR from './modalQR';
 
 
 const Campaigns = () => {
@@ -26,7 +27,7 @@ const Campaigns = () => {
 
         <ModalManageCampaign />
 
-        <ModalManageTier />
+        {/** <ModalManageTier />  **/}
 
 
       </div>
@@ -57,7 +58,7 @@ const Campaigns = () => {
                   <td>{campaign.pointsPool}</td>
                   <td>
                     <ModalTopup/>
-                    <button className="btn btn-sm btn-outline-success mx-1">QR Code</button>
+                    <ModalQR qrId={campaign.id}/>
                   </td>
                 </tr>
               ))}

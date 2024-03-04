@@ -95,10 +95,10 @@ function ModalManageCampaign() {
                         </FormWizard.TabContent>
                         <FormWizard.TabContent title="Campaign Rules">
                             {/* Step 3: Campaign Rules */}
-                              <p className="">Select which Tier(s) this campaign is available for</p>
+                              <p className="d-none">Select which Tier(s) this campaign is available for</p>
                               
 
-                              <div className="btn-group mb-3" role="group" aria-label="Select which Tier(s) this campaign is available for">
+                              <div className="btn-group mb-3 d-none" role="group" aria-label="Select which Tier(s) this campaign is available for">
                                 <input type="checkbox" className="btn-check" id="tier1" autoComplete="off"/>
                                 <label className="btn btn-outline-primary" htmlFor="tier1">Bronze</label>
 
@@ -132,7 +132,7 @@ function ModalManageCampaign() {
                                 <input type="checkbox" className="btn-check" id="btncheck5" autoComplete="off"/>
                                 <label className="btn btn-outline-primary" htmlFor="btncheck5">Other</label>
                               </div>
-                            <button onClick={() => handleAddCampaign()} className="btn btn-success">Add Campaign</button>
+                            <button onClick={() => handleAddCampaign()} className="btn btn-success">Publish Campaign</button>
                         </FormWizard.TabContent>
                     </FormWizard>
                 </Modal.Body>
